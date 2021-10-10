@@ -12,7 +12,7 @@ class CreatePostForm(FlaskForm):
     submit = SubmitField("Submit Post")
 
 class RegisterForm(FlaskForm):
-    email = StringField("Email Adress", validators=[DataRequired(), Email()])
+    email = StringField("Email Address", validators=[DataRequired(), Email()])
     password = PasswordField("Password", validators=[DataRequired(),
                                                      EqualTo('confirm', message='Passwords must match.')])
     confirm = PasswordField("Repeat Password")
@@ -20,7 +20,7 @@ class RegisterForm(FlaskForm):
     submit = SubmitField("Register")
 
 class LoginForm(FlaskForm):
-    email = StringField("Email Adress", validators=[DataRequired(), Email()])
+    email = StringField("Email Address", validators=[DataRequired(), Email()])
     password = PasswordField("Password", validators=[DataRequired()])
     submit = SubmitField("Login")
 
